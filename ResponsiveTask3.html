@@ -1,0 +1,265 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Responsive Web Layout</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Sidebar */
+
+        .sidebar {
+            width: 220px;
+            height: 100vh;
+            background-color: #222;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin: 8px 0;
+        }
+
+        .sidebar a:hover {
+            background-color: #444;
+        }
+
+        /* Main area */
+
+        .main {
+            margin-left: 220px;
+            padding: 25px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Product Card */
+
+        .product {
+            width: 300px;
+            background-color: white;
+
+            /* CSS Box Model */
+            margin: 25px auto;
+            padding: 20px;
+            border: 2px solid black;
+
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 5px 5px 10px gray;
+        }
+
+        .product img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .product h2 {
+            margin: 15px 0;
+        }
+
+        .product p {
+            padding: 5px;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #222;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+
+        /* Blog Section */
+
+        .blogs {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .blog {
+            flex: 1;
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+
+            /* 3-D effect */
+            box-shadow: 7px 7px 0px #aaa;
+        }
+
+        .blog h2 {
+            margin-top: 0;
+        }
+
+        .blog p {
+            line-height: 1.5;
+        }
+
+        /* Mobile View */
+
+        @media (max-width: 768px) {
+
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                text-align: center;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                margin: 5px;
+            }
+
+            .main {
+                margin-left: 0;
+                padding: 15px;
+            }
+
+            .blogs {
+                flex-direction: column;
+            }
+
+            .product {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+
+        /* Small Mobile */
+
+        @media (max-width: 480px) {
+
+            .sidebar a {
+                display: block;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <div class="sidebar">
+        <h2>My Website</h2>
+
+        <a href="#">Home</a>
+        <a href="#">Products</a>
+        <a href="#">Blog</a>
+        <a href="#">Contact</a>
+    </div>
+
+
+    <!-- Main Content -->
+
+    <div class="main">
+
+        <h1>Responsive Web Layout</h1>
+
+        <!-- Product Card -->
+
+        <h2>Product Card</h2>
+
+        <div class="product">
+
+            <img src="https://via.placeholder.com/150"
+                 alt="Product">
+
+            <h2>Smart Watch</h2>
+
+            <p>
+                This is a smart watch with useful features
+                and a simple design.
+            </p>
+
+            <div class="price">₹2999</div>
+
+            <button>Buy Now</button>
+
+        </div>
+
+
+        <!-- Blog Section -->
+
+        <h2>My Blogs</h2>
+
+        <div class="blogs">
+
+            <div class="blog">
+                <h2>HTML</h2>
+
+                <p>
+                    HTML is used to create the basic
+                    structure of a web page.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+
+            <div class="blog">
+                <h2>CSS</h2>
+
+                <p>
+                    CSS is used to add style, colors,
+                    spacing and layout to a website.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+
+            <div class="blog">
+                <h2>Responsive Design</h2>
+
+                <p>
+                    Responsive design makes a website
+                    work properly on different screen sizes.
+                </p>
+
+                <a href="#">Read More</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+```
